@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+      src: url(./font/Pretendard-Bold.woff);
+  }
+  
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+      src: url(./font/Pretendard-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+    font-weight: 500;
+}
+
+body{
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+p {
+    color: white;
+}
+
+#left {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+#nav {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    gap: 24px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #C5C5C5;
+}
+
+#nav li a:hover {
+    color: #fff;
+}
+
+
+#title {
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+#header {
+    display: flex;
+    background-color: #1E1E2D;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+#header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    padding: 24px;
+    max-width: 1080px;
+    width: 100%;
+}
+
+#right img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#main {
+    background-color: #151521;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 24px;
+    max-width: 1080px;
+    width: 100%;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    
+}
+
+.menu p {
+    color: #fff;
+    display: flex;
+    
+}
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#previous .menu-button {
+    background-color: #7F2A39;
+}
+
+#play .menu-button{
+    background-color: #42835C;
+}
+
+#next .menu-button{
+    background-color: #444490;
+}
+
+#shuffle .menu-button{
+    background-color: #57989C;
+}
+
+.menu-button img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    justify-content: center;
+}
+
+
+
+.music-items p:first-child{
+    font-size: 18px;
+}
+
+.music-items {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.music-items li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: #1E1E2D;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 16px;
+    height: 53px;
+}
+
+.music-items p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#playlist .music-items {
+    flex-direction: column;
+}
+
+#recommend .music-items li {
+    flex-basis: calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
+}
+
+.cover-music-items {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    border-radius: 4px;
+}
+
+.cover-music-items li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: #1E1E2D;
+    border-radius: 4px;
+    padding: 16px;  
+    gap: 16px;
+    flex-basis: calc(50% - 16px);
+    max-width: calc(50% - 16px);
+}
+
+@media (max-width: 728px) {
+    #recommend .music-items li {
+        flex-basis: 100%;
+    }
+
+    .cover-music-items li {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 424px) {
+    #recommend .music-items li,
+    .cover-music-items li {
+        flex-basis: 100%;
+    }
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.album-info p:not(:first-of-type) {
+    color: #565674;
+    font-size: 14px;
+}
+
+.album-cover {
+    width: 60px;
+    height: 90px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
